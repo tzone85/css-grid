@@ -1,142 +1,61 @@
-<!-- <!DOCTYPE html>
-<html lang="en"> -->
-<!-- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Using CSS Grid</title>
-    <style>
-        body{
-            color: #fff;
-            font-family: 'Nunito Semibold';
-            text-align: center;
-        }
-
-        #content {
-            display: grid;
-            /* grid-template-columns: 30% 20% 50%; */
-            /* grid-template-columns: 1fr 2fr 1fr; */
-
-            /* grid-template-columns: repeat(3, 1fr); */ /* 3 columns of 1 fraction each */
-            /* grid-template-rows: repeat(3, minmax(200px, auto)); */  /* seldom need to use this feature coz rows are auto generated with content */
-            
-            /* grid-column-gap: 10px;
-            grid-row-gap: 10px; */
-            grid-gap: 10px;         /*  Combining the above two statements into one */
-
-            grid-template-columns: repeat(6, 1fr);
-            grid-template-rows: repeat(4, minmax(150px, auto));
-            
-            /* grid-template-rows: 200px 300px 400px 200px; */
-            /* grid-auto-rows: minmax(200px auto); */
-            max-width: 960px;
-            margin: 0 auto;
-        }
-
-        #content div{
-            background: #3bbced;
-            padding: 30px;
-        }
-        
-        #content div:nth-child(even) {
-            background: #777;
-        }
-
-        .One {
-            /*grid-column-start: 1;
-            grid-column-end: 3; */
-            grid-column: 1/3;
-        }
-        .Two {
-            grid-column: 3/7;
-        }
-        .Three {
-            grid-column: 1/4;
-            grid-row: 2/4;
-        }
-        .Four {
-            grid-column: 4/7;
-            grid-row: 2/4;
-        }
-        .Five {
-            grid-column: 3/7;
-        }
-        .Six {
-            grid-row: 4;
-            grid-column: 1/3;
-        }
-    </style>
-</head>
-<body>
-    <div id="content">
-
-		<div class="One">1</div>
-		<div class="Two">2</div>
-		<div class="Three">3</div>
-		<div class="Four">4</div>
-		<div class="Five">5</div>
-		<div class="Six">6</div>
-	</div>
-</body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Using CSS Grid</title>
-	<style>
-		body{
-			color: #fff;
-			font-family: 'Nunito Semibold';
-			text-align: center;
-		}
-		#content{
-			display: grid;
-			/*grid-template-columns: 30% 20% 50%;*/
-			/*grid-template-columns: 1fr 2fr 1fr;*/
-			grid-template-columns: repeat(3, 1fr);
-            grid-gap: 10px;
-			max-width: 960px;
-			margin: 0 auto;
-		}
-		#content div{
-			background: #3bbced;
-			padding: 30px;
-		}
-		#content div:nth-child(even){
-			background: #777;
-			padding: 30px;
-		}
-        .nested {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 10px;
-            grid-column: span 3; /* span, basically starts wherever you are and moves three columns from there */
-        }
-        .nested p {
-            border: 1px solid #fff;
-            padding: 20px;
-            margin: 0;
-        }
-	</style>
-</head>
-<body>
+    <head>
+        <title>Using CSS Grid</title>
+        <style>
+            body{
+                color: #fff;
+                font-family: 'Nunito Semibold';
+                text-align: center;
+            }
+            #content{
+                display: grid;
+                /*grid-template-columns: 30% 20% 50%;*/
+                /*grid-template-columns: 1fr 2fr 1fr;*/
+                grid-template-columns: repeat(3, 1fr);
+                grid-auto-rows: minmax(150px, auto);
+                grid-gap: 10px;
+                max-width: 960px;
+                margin: 0 auto;
 
-	<div id="content">
+                /* align-items: stretch; */ /* align up and down */
+                /* justify-items: left; */ /*  jusify left and right */
+            }
+            #content div{
+                background: #3bbced;
+                padding: 30px;
+            }
+            #content div:nth-child(even){
+                background: #777;
+                padding: 30px;
+            }
 
-		<div>1</div>
-		<div>2</div>
-		<div>3</div>
-		<div class="nested">
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
+            .one {
+                justify-self: end;
+                align-self: end;
+            }
+            .two {
+                align-self: center;
+                justify-self: center;
+            }
+            .three {
+                align-self: start;
+                justify-self: start;
+            }
+            .
+        </style>
+    </head>
+    <body>
+
+        <div id="content">
+
+            <div class="one">1</div>
+            <div class="two">2</div>
+            <div class="three">3</div>
+            <div class="four">4</div>
+            <div class="five">5</div>
+            <div class="six">6</div>
         </div>
-		<div>5</div>
-		<div>6</div>
 
-	</div>
-
-</body>
+    </body>
 </html>
