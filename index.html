@@ -16,7 +16,15 @@
             /* grid-template-columns: 30% 20% 50%; */
             /* grid-template-columns: 1fr 2fr 1fr; */
 
-            grid-template-columns: repeat(9, 1fr);
+            grid-template-columns: repeat(3, 1fr); /* 3 columns of 1 fraction each */
+            /* grid-template-rows: repeat(3, minmax(200px, auto)); */  /* seldom need to use this feature coz rows are auto generated with content */
+            
+            /* grid-column-gap: 10px;
+            grid-row-gap: 10px; */
+            grid-gap: 10px;         /*  Combining the above two statements into one */
+            
+            /* grid-template-rows: 200px 300px 400px 200px; */
+            /* grid-auto-rows: minmax(200px auto); */
             max-width: 960px;
             margin: 0 auto;
         }
@@ -37,7 +45,7 @@
 
 		<div>1</div>
 		<div>2</div>
-		<div>3</div>
+		<div>3 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti maxime cupiditate quis? Labore, ratione, nostrum iure, itaque perferendis aperiam ducimus quis autem minus earum esse doloremque corrupti quos praesentium sequi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem consectetur necessitatibus doloremque ad facere? Aliquam ex atque distinctio id commodi. Vel neque tempore nobis? Iste dolor inventore necessitatibus consequatur dicta!</div>
 		<div>4</div>
 		<div>5</div>
 		<div>6</div>
